@@ -40,5 +40,11 @@ public class TestPoint2D
         b.affiche();
         
         System.out.println("Dist entre a et b : "+a.distance(b));
+        //on supppose qu'on teste avec a et b au même endroit, equals renvoie true correctement dans ce cas
+        System.out.println("Tests égalité: a.equals(null) "+a.equals(null));
+        System.out.println("Tests égalité: a.equals(45) "+a.equals(45));
+        System.out.println("Tests égalité: a.equals(\"Point2D\") "+a.equals("Point2D"));
+        System.out.println("Tests égalité: a == b "+(a == b));
+        System.out.println("Tests égalité: a.equals(b) "+a.equals(b));
     }
 }
