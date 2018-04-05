@@ -1,4 +1,4 @@
-package pkg6td;
+package pkgVoy;
 
 public class ReelContraint {
     private final double min;
