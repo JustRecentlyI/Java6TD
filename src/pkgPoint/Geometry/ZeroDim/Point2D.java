@@ -43,4 +43,21 @@ public class Point2D
     public float getY(){
         return y;
     }
+    
+    @Override
+    public boolean equals(Object obj) {
+        if(this == obj) return true ;
+        if(obj==null) return false ;
+        if(getClass() != obj.getClass()) return false ;
+        Point2D p = (Point2D) obj ;
+        return x==p.x && y==p.y ;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 43 * hash + Float.floatToIntBits(this.x);
+        hash = 43 * hash + Float.floatToIntBits(this.y);
+        return hash;
+    }
 }
