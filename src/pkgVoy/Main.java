@@ -53,14 +53,17 @@ public class Main {
         }
         //reponse question 4
         //crÃ©ation d'un tableau des voyages de l'agence
-        Voyage[] tabVoyages = new Voyage[3];
+        Voyage[] tabVoyages = new Voyage[4];
         tabVoyages[0] = new Voyage("Lyon", "Paris", 470, 0.08);
         tabVoyages[1] = new Voyage("Lyon", "Paris", 400, 1.1);
         tabVoyages[2] = new Voyage("Lyon", "New York", 6205, 0.45);
+        // Ajout d'un nouveau voyage de la classe fille
+        tabVoyages[3] = new VoyageReduit("Lyon", "New York", 8020, 2.2, 0.1);
 
         //affichage des voyages disponibles
         for(int i = 0; i < tabVoyages.length; i++){
-            System.out.println(tabVoyages[i]);
+            tabVoyages[i].saisir(); // Redemande de saisir au clavier pour chaque voyage
+            //System.out.println(tabVoyages[i]); // Affiche directement tous les voyages
         }
 
         //crÃ©ation d'un Scanner pour permettre la saisie utilisateur
