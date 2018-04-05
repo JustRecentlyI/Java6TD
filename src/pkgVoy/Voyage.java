@@ -81,6 +81,19 @@ public class Voyage {
             return Voyage.NON_TROUVE;//pourrait aussi Ãªtre une exception
         }
     }
+    
+    public void saisir() {
+        java.util.Scanner scan = new java.util.Scanner(System.in);
+        System.out.println("Saisissez votre ville de départ :");
+        this.depart = scan.nextLine();
+        System.out.println("Saisissez votre ville d'arrivée :");
+        this.arrive = scan.nextLine();
+        System.out.println("Saisissez votre distance :");
+        this.longueur.setVal(scan.nextInt());
+        System.out.println("Saisissez votre px / km :");
+        this.prixKilometre.setVal(scan.nextDouble()); 
+        scan.nextLine();//vidage de buffer
+    }
 
     @Override
     public boolean equals(Object o){
