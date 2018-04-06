@@ -15,6 +15,8 @@ public class PersonnelAdministratif extends Personnel {
         salaire = volHoraire * salaireHoraire;       
     }
     
+ 
+    
     public int getSalaireHoraire () {return salaireHoraire;}
     public int getVolHoraire () {return volHoraire;}
     public int getSalaire () {return salaire;}
