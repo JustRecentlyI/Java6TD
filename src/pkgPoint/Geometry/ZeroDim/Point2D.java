@@ -1,12 +1,12 @@
 package pkgPoint.Geometry.ZeroDim;
-
+import pkgPoint.Geometry.FigGeo2D;
 /**
  * Write a description of class Point2D here.
  *
  * @author Alexandre Arnaud - Corentin Besnard
  * @version 02/15/2018
  */
-public class Point2D
+public class Point2D implements Cloneable, FigGeo2D
 {
     // instance variables 
     private float x;
@@ -45,6 +45,19 @@ public class Point2D
     }
     
     @Override
+    public Point2D clone(){
+        try{
+            return (Point2D) super.clone();
+        }
+        catch (CloneNotSupportedException e ) {
+            System.out.println("Cette classe n'implémente pas Cloneable");
+            e.printStackTrace();
+            return null;
+        }
+    }
+    
+    
+    @Override
     public boolean equals(Object obj) {
         if(this == obj) return true ;
         if(obj==null) return false ;
@@ -53,11 +66,17 @@ public class Point2D
         return x==p.x && y==p.y ;
     }
 
+    //hashcode géneré automatiquement par NetBeans
     @Override
     public int hashCode() {
         int hash = 5;
         hash = 43 * hash + Float.floatToIntBits(this.x);
         hash = 43 * hash + Float.floatToIntBits(this.y);
         return hash;
+    }
+
+    @Override
+    public boolean estIdentique(Object o) {
+        return this.equals(o);
     }
 }
