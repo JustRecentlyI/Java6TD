@@ -1,4 +1,4 @@
-package pkgPoint.Geometry;
+package pkgPoint.Geometry.TwoDim;
 import java.util.Objects;
 import pkgPoint.Geometry.ZeroDim.Point2D;
 import pkgPoint.Geometry.OneDim.Segment2D;
